@@ -1,0 +1,112 @@
+getgenv().extra = "Void"
+getgenv().watermarkname = "🌎"
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local watermark = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local name = Instance.new("TextLabel")
+local fps = Instance.new("TextLabel")
+local build = Instance.new("TextLabel")
+local bar_2 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+watermark.Name = "watermark"
+watermark.Parent = ScreenGui
+watermark.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+watermark.BorderColor3 = Color3.fromRGB(0, 0, 0)
+watermark.Position = UDim2.new(0.0695468932, 0, 0.286381304, 0)
+watermark.Size = UDim2.new(0, 299, 0, 43)
+watermark.Active = true
+watermark.Draggable = true
+
+bar.Name = "bar"
+bar.Parent = watermark
+bar.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+bar.BorderColor3 = Color3.fromRGB(1, 1, 1)
+bar.Position = UDim2.new(0.259843618, 0, 0.188999996, 0)
+bar.Size = UDim2.new(0, 1, 0, 24)
+
+name.Name = "name"
+name.Parent = watermark
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 1.000
+name.Position = UDim2.new(0.0406822935, 0, -0.0930232555, 0)
+name.Size = UDim2.new(0, 58, 0, 50)
+name.Font = Enum.Font.Code
+name.Text = "void"
+name.TextColor3 = Color3.fromRGB(164, 84, 255)
+name.TextSize = 16.000
+name.TextStrokeColor3 = Color3.fromRGB(1, 1, 1)
+name.TextStrokeTransparency = 0.000
+name.TextWrapped = true
+
+fps.Name = "fps"
+fps.Parent = watermark
+fps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fps.BackgroundTransparency = 1.000
+fps.Position = UDim2.new(0.302871704, 0, -0.0910609066, 0)
+fps.Size = UDim2.new(0, 68, 0, 49)
+fps.Font = Enum.Font.Code
+fps.TextColor3 = Color3.fromRGB(164, 84, 255)
+fps.TextSize = 16.000
+fps.TextStrokeColor3 = Color3.fromRGB(1, 1, 1)
+fps.TextStrokeTransparency = 0.000
+fps.TextWrapped = true
+
+build.Name = "build"
+build.Parent = watermark
+build.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+build.BackgroundTransparency = 1.000
+build.Position = UDim2.new(0.531601727, 0, -0.114316717, 0)
+build.Size = UDim2.new(0, 91, 0, 49)
+build.Font = Enum.Font.Code
+build.TextColor3 = Color3.fromRGB(164, 84, 255)
+build.TextSize = 16.000
+build.TextStrokeColor3 = Color3.fromRGB(1, 1, 1)
+build.TextStrokeTransparency = 0.000
+build.TextWrapped = true
+
+bar_2.Name = "bar"
+bar_2.Parent = watermark
+bar_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+bar_2.BorderColor3 = Color3.fromRGB(1, 1, 1)
+bar_2.Position = UDim2.new(0.533551514, 0, 0.212255806, 0)
+bar_2.Size = UDim2.new(0, 1, 0, 24)
+
+-- Scripts:
+
+local function ODZVV_fake_script() -- name.Script 
+	local script = Instance.new('Script', name)
+
+	script.Parent.Text = (watermarkname)
+end
+coroutine.wrap(ODZVV_fake_script)()
+local function TQYCUO_fake_script() -- fps.yes 
+	local script = Instance.new('LocalScript', fps)
+
+	local fps = 0
+	local rs = game:GetService'RunService'
+	
+	function updateFPS()
+		fps = fps + 1
+	end
+	
+	rs.RenderStepped:connect(updateFPS)
+	
+	while wait'0.63' do
+		script.Parent.Text = fps .." FPS"
+		fps = 0
+	end
+end
+coroutine.wrap(TQYCUO_fake_script)()
+local function ISACERW_fake_script() -- build.Script 
+	local script = Instance.new('Script', build)
+
+	script.Parent.Text = (extra)
+end
+coroutine.wrap(ISACERW_fake_script)()
